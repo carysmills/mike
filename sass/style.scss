@@ -1,0 +1,431 @@
+/*
+* Theme Name: HackerYou Starter Theme
+* Theme URI: http://hackeryou.com;
+* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Version: 1.0
+* Author: HackerYou
+* Author URI: http://hackeryou.com
+*/
+
+@import 'normalize';
+@import 'typography';
+@import 'navigation';
+@import 'sidebar';
+@import 'comments';
+@import 'footer';
+/*
+====================================
+Default Styling
+====================================
+*/
+
+a, a:active, a:focus {
+    outline: none;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	color: #333;
+	// background: #F7F7F2;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.content {
+	float: left;
+	width: 100%;
+	// height: 100vh;
+}
+
+.full {
+	width: 100%;
+}
+
+.content1 {
+	width: 40%;
+	float: right;
+}
+
+.content2 {
+	width: 55%;
+	float: left;
+	height: 600px;
+}
+
+@media (max-width: 400px) {
+ .content1 {
+    width: 50%; 
+    h1 {
+    	font-size: 25px;
+    }
+}
+.content2 {
+	width: 45%;
+}
+}
+
+.bio {
+	text-align: right;
+	margin-right: 10px;
+	font-size: 25px; 
+	color: #003459;
+}
+
+.paper {
+  width: calc(33.3% - 6px);
+  height: 280px;
+  float: left;
+  margin: 2px;
+}
+
+@media (max-width: 600px) {
+ .paper {
+    width: calc(50% - 6px);
+}
+.bio {
+	font-size: 20px;
+}
+}
+
+@media (max-width: 500px) {
+ .paper:last-child {
+    display: none;
+}
+}
+
+@media (max-width: 500px) {
+	.paper:nth-last-child(2) {
+    display: none;
+}
+}
+
+@media (max-width: 300px) {
+ .paper {
+    width: calc(100% - 4px);
+}
+}
+
+@media (max-width: 300px) {
+	.paper:nth-last-child(3) {
+    display: none;
+}
+}
+
+.about_main {
+	margin-top: 50px;
+	height: 75vh;
+	h2 {
+		text-align: left;
+	}
+}
+
+.headshot {
+  float: left;
+  margin-left: 50px;
+}
+
+.headshot2 {
+	border-radius: 50%;
+	width: 300px;
+	height: 300px;
+}
+
+.about_container {
+	margin: 0 auto;
+	margin-right: 50px;
+	width: 60%;
+	float: right;
+	margin-left: 30px;
+}
+
+@media (max-width: 1080px) {
+ .about_container {
+    width: 50%;
+}
+}
+
+@media (max-width: 870px) {
+.headshot2 {
+	width: 220px;
+	height: 220px;
+}
+}
+
+
+@media (max-width: 700px) {
+ .about_container {
+    width: 40%;
+}
+.headshot2 {
+	width: 200px;
+	height: 200px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+}
+
+
+@media (max-width: 580px) {
+ .about_container {
+    width: 90%;
+    float: left;
+}
+.headshot {
+float: none;
+margin: 0 auto;
+}
+.headshot2 {
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+}
+
+@media (max-width: 310px) {
+ .headshot2 {
+   width: 150px;
+   height: 150px;
+}
+}
+
+button {
+	font-family: 'Roboto', sans-serif;
+	background: none;
+	border: none;
+	border: 2px solid #007Ea7;
+	transition: background 0.3s;
+	font-size: 20px;
+	&:hover {
+	background: rgba(0,126,167,0.4)
+	}
+}
+
+.contact_container {
+	max-width: 1200px;
+	margin: 50px 60px;	
+}
+
+.contact_content {
+	float: left;
+	width: 60%;
+	h2 {
+		text-align: left;
+	}
+}
+
+.twitter {
+	float: right;
+	width: 40%;
+}
+
+@media (max-width: 500px) {
+ .twitter {
+    width: 100%;
+}
+.contact_content {
+	width: 100%;
+}
+}
+
+textarea, input {
+	width: 90%;
+	border: 2px solid #D5D5D6;
+}
+
+input[type=submit] {
+	width: auto;
+	background: none;
+	border: none;
+	border: 2px solid #D5D5D6;
+	transition: background 0.3s;
+	transition: all 0.2s;
+	text-align: left;
+	color: #A9A9A9;
+	&:hover{
+	background: rgba(0,126,167, 0.3);
+	}
+}
+
+.mix {
+	float: left;
+	width: calc(50% - 40px);
+	padding: 10px;
+	background: RGBA(246, 246, 246, 0.6);
+	margin: 20px 0;
+	margin-right: 20px;
+	max-height: 400px;
+	min-height: 300px;
+}
+
+@media (max-width: 970px) {
+ .mix {
+  height: 350px;
+}
+}
+
+@media (max-width: 837px) {
+ .mix {
+  height: 420px;
+}
+}
+
+@media (max-width: 780px) {
+ .mix {
+  height: inherit;
+  width: 100%;
+  margin-right: 50px;
+  max-height: none;
+  min-height: none;
+}
+}
+
+.main_portfolio {
+	margin-top: 50px;
+h2 {
+	text-align: left;
+}
+}
+
+.portfolio_items {
+	display: block;
+	margin-left: 80px;
+}
+
+@media (max-width: 780px) {
+ .portfolio_items {
+ margin-right: 80px;
+}
+}
+
+#Container .mix{
+	display: none;
+}
+
+.whig h3, .whig .date {
+	font-family: 'Libre Baskerville', serif;
+	color: #0067A8;
+	font-weight: bold;
+	margin: 0;
+}
+
+.whig span {
+	color: #0067A8;
+	transition: color 0.2s;
+&:hover {
+	color:black;
+}
+}
+
+.citizen h3, .citizen .date {
+	font-family: 'Libre Baskerville', serif;
+	color: #9CD2BE;
+	font-weight: bold;
+	margin: 0;
+}
+
+.citizen span {
+	color: #9CD2BE;
+	transition: color 0.2s;
+&:hover {
+	color:black;
+}
+}
+
+.metro h3, .metro .date {
+	font-family: 'Libre Baskerville', serif;
+	color:  #00B347;
+	font-weight: bold;
+	margin: 0;
+}
+
+.metro span {
+	color: #00B347;
+	transition: color 0.2s;
+&:hover {
+	color:black;
+}
+}
+
+.post h3, .post .date {
+	font-family: 'Libre Baskerville', serif;
+	color: #FFCD00;
+	font-weight: bold;
+	margin: 0;
+}
+
+.post span {
+	color: #FFCD00;
+	transition: color 0.2s;
+&:hover {
+	color:black;
+}
+}
+
+.star h3, .star .date {
+	font-family: 'Libre Baskerville', serif;
+	color: #0065A6;
+	font-weight: bold;
+	margin: 0;
+}
+
+.star span {
+	color: #0065A6;
+	transition: color 0.2s;
+&:hover {
+	color:black;
+}
+}
+
+
+.whig p, .citizen p, .metro p, .post p, .metro p, .star p {
+	margin: 0;
+}
+
+.filter {
+	font-size: 15px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+
+.citizen_button {
+	border: 2px solid #9CD2BE;
+	&:hover{
+		background: #9CD2BE;
+	}
+}
+
+.metro_button {
+	border: 2px solid #00B347;
+	&:hover{
+		background: #00B347;
+	}
+}
+
+.star_button {
+	border: 2px solid #0065A6;
+	&:hover{
+		background: #0065A6;
+	}
+}
+
+.post_button {
+	border: 2px solid #FFCD00;
+	&:hover{
+		background: #FFCD00;
+	}
+}
